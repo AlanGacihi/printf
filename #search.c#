@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include "_printf.h"
+#include <stdarg.h>
+
+/**
+ * search - look for the appropriate function
+ * @format: conversion specifier
+ * @count: number of printed characters
+ * @list: list of arguments
+ *
+ */
+void search(const char fmt, int *c, va_list *list)
+{
+	while (structarray)
+	{
+		format[i];
+	}
+}

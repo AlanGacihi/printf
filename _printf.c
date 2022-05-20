@@ -1,46 +1,41 @@
-#include "main.h"
+#include <stdio.h>
+#include "_printf.h"
+#include <stdlib.h>
+#include <stdarg.h>
 /**
-* _printf - is a function that selects the correct function to print.
-* @format: identifier to look for.
-* Return: the length of the string.
-*/
-int _printf(const char * const format, ...)
+ *_printf - A function that prints characters
+ *@format: A format specifier
+ *
+ *Return: Always return 0, On success, otherwise -1.
+ **/
+int _printf(const char *format, ...)
 {
-	convert_match m[] = {
-		{"%c", printf_c}, {"%s", printf_string},
-		{"%%", printf_37}, {"%i", printf_int},
-		{"%d", printf_dec}, {"%r", printf_strev},
-		{"%R", printf_rot13}, {"%b", printf_bin},
-		{"%u", printf_unsigned}, {"%o", printf_oct},
-		{"%x", printf_hex}, {"%X", printf_HEX},
-		{"%S", printf_ex_str}, {"%p", printf_ptr}
-	};
+	int i = 0;
+	int c = 0;
 
-	va_list args;
-	int i = 0, j, len = 0;
+	va_list(list);
 
-	va_start(args, format);
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-		return (-1);
-
-Here:
-	while (format[i] != '\0')
+	if (format)
 	{
-		j = 13;
-		while (j >= 0)
+		va_start(list, format);
+		while (format[i])
 		{
-			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
+			if (format[i] != '%')
 			{
-				len += m[j].f(args);
-				i = i + 2;
-				goto Here;
+				_putchar(format[i]);
 			}
-			j--;
+			else
+			{
+				if (format[i++])
+					search(format[i], &c, &list);
+				else
+					return (-1);
+			}
+			i++;
+			c++;
 		}
-		_putchar(format[i]);
-		len++;
-		i++;
+		va_end(list);
+		return (c);
 	}
-	va_end(args);
-	return (len);
+	return (-1);
 }
