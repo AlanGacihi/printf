@@ -5,14 +5,29 @@
 /**
  * search - look for the appropriate function
  * @format: conversion specifier
- * @count: number of printed characters
+ * @c: number of printed characters
  * @list: list of arguments
  *
  */
-void search(const char fmt, int *c, va_list *list)
+void search(const char format, int *c, va_list *list)
 {
-	while (structarray)
+	int i = 0;
+
+	function_t funcs [] = {
+		{'c', print_char},
+		{NULL, NULL}
+	};
+
+	while (funcs[i].id)
 	{
-		format[i];
+		if (funcs[i].id == format)
+		{
+			*c += funcs[i].f(list);
+			return;
+		}
+		i++;
 	}
+
+	_putchar(format);
+	return;
 }

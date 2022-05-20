@@ -2,10 +2,11 @@
 #include "_printf.h"
 #include <stdarg.h>
 /**
- *struct format - a new type struct car
- *
+ *search - 
+ *format - a new type struct car
+ *c
  */
-search(const char fmt, int *c, va_list *list)
+search(const char format, int *c, va_list *list)
 {
 	/**
 	  *Define an array of structs

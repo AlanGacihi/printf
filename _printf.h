@@ -13,12 +13,13 @@
 typedef struct function_s
 {
 	char id;
-	int (*f)(int *, va_list *);
+	int (*f)(va_list *);
 } function_t;
 
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-void search(const char fmt, int *c, va_list *list);
+void search(const char format, int *c, va_list *list);
+int print_char(va_list *list);
 
 #endif /* PRINTF_H */
