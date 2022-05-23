@@ -23,6 +23,7 @@ int _printf(const char *format, ...)
 			if (format[i] != '%')
 			{
 				_putchar(format[i]);
+				c++;
 			}
 			else
 			{
@@ -32,7 +33,6 @@ int _printf(const char *format, ...)
 					return (-1);
 			}
 			i++;
-			c++;
 		}
 		va_end(list);
 		return (c);

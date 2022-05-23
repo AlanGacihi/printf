@@ -14,13 +14,13 @@ void search(const char format, int *c, va_list *list)
 	int i = 0;
 
 	function_t funcs [] = {
-		{'c', print_char},
-		{NULL, NULL}
+		{"c", print_char}, {"i",print_integer},
+		{"d", print_integer2}, {NULL, NULL}
 	};
 
 	while (funcs[i].id)
 	{
-		if (funcs[i].id == format)
+		if (*(funcs[i].id) == format)
 		{
 			*c += funcs[i].f(list);
 			return;
