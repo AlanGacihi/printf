@@ -10,8 +10,20 @@
  **/
 int _printf(const char *format, ...)
 {
+<<<<<<< HEAD
 	int i = 0;
 	int c = 0;
+=======
+	convert_match m[] = {
+		{"%c", printf_char}, {"%s", printf_string},
+		{"%%", printf_37}, {"%i", printf_int},
+		{"%d", printf_dec}, {"%r", printf_srev},
+		{"%R", printf_rot13}, {"%b", printf_bin},
+		{"%u", printf_unsigned}, {"%o", printf_oct},
+		{"%x", printf_hex}, {"%X", printf_HEX},
+		{"%S", printf_exclusive_string}, {"%p", printf_pointer}
+	};
+>>>>>>> 02058ac59db5ad950b3268b9ad9c97cef5b9d8c9
 
 	va_list(list);
 

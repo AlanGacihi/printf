@@ -1,8 +1,0 @@
-#ifndef PRINTF_H
-#define PRINTF_H
-
-int _putchar(char c);
-int _printf(const char *format, ...);
-void search(const char fmt, int *c, va_list *list);
-
-#endif /* PRINTF_H */
