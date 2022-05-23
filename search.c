@@ -13,9 +13,12 @@ void search(const char format, int *c, va_list *list)
 {
 	int i = 0;
 
-	function_t funcs [] = {
-		{"c", print_char}, {"i",print_integer},
-		{"d", print_integer2}, {NULL, NULL}
+	function_t funcs[] = {
+		{"c", print_char}, {"i", print_signed_int},
+		{"d", print_signed_int}, {"b", print_binary},
+		{"o", print_octal}, {"x", print_hex},
+		{"X", print_HEX}, {"u", print_unsigned_int},
+		{"s", print_string}, {NULL, NULL}
 	};
 
 	while (funcs[i].id)
@@ -29,5 +32,4 @@ void search(const char format, int *c, va_list *list)
 	}
 
 	_putchar(format);
-	return;
 }

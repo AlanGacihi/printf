@@ -2,16 +2,16 @@
 #include <stdarg.h>
 
 /**
- * print_integer - prints a interger
+ * print_unsigned_int - prints an unsigned integer
  * @list: address to a list of arguments
  *
  * Return: 1 - Always
  */
-int print_integer(va_list *list)
+int print_unsigned_int(va_list *list)
 {
 	int n;
 
 	n = va_arg(*list, int);
 
-	return (print_number(n));
+	return (print_int(n, 0));
 }
