@@ -31,6 +31,7 @@ int print_rev_string(va_list *list);
 int print_ex_string(va_list *list);
 int print_pointer(va_list *list);
 int print_rot13ed(va_list *list);
+int print_percent(va_list *list);
 int print_base(unsigned int n, int base, int flag);
 
 #endif /* PRINTF_H */
