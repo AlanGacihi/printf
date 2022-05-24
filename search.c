@@ -32,4 +32,5 @@ void search(const char format, int *c, va_list *list)
 	}
 
 	_putchar(format);
+	*c  += 1;
 }
