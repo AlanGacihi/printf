@@ -27,6 +27,10 @@ int print_binary(va_list *list);
 int print_hex(va_list *list);
 int print_HEX(va_list *list);
 int print_string(va_list *list);
+int print_rev_string(va_list *list);
+int print_ex_string(va_list *list);
+int print_pointer(va_list *list);
+int print_rot13ed(va_list *list);
 int print_base(unsigned int n, int base, int flag);
 
 #endif /* PRINTF_H */

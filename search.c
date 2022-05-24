@@ -18,7 +18,9 @@ void search(const char format, int *c, va_list *list)
 		{"d", print_signed_int}, {"b", print_binary},
 		{"o", print_octal}, {"x", print_hex},
 		{"X", print_HEX}, {"u", print_unsigned_int},
-		{"s", print_string}, {NULL, NULL}
+		{"s", print_string}, {"S", print_ex_string},
+		{"r", print_rev_string}, {"R", print_rot13ed},
+		{"p", print_pointer}, {NULL, NULL}
 	};
 
 	while (funcs[i].id)
