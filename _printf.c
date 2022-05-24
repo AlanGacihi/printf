@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				if (format[i++])
+				if (format[++i])
 					search(format[i], &c, &list);
 				else
 					return (-1);

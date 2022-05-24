@@ -33,6 +33,7 @@ void search(const char format, int *c, va_list *list)
 		i++;
 	}
 
+	_putchar('%');
 	_putchar(format);
-	*c  += 1;
+	*c  += 2;
 }
