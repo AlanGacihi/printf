@@ -28,12 +28,12 @@ int _printf(const char *format, ...)
 				if (format[i++])
 					search(format[i], &c, &list);
 				else
-					return (-1);
+					return (c);
 			}
 			i++;
 		}
 		va_end(list);
 		return (c);
 	}
-	return (-1);
+	return (0);
 }
