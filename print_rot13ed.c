@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * printf_rot13ed - printf str to ROT13 place into buffer
+ * print_rot13ed - printf str to ROT13 place into buffer
  * @list: list of arguments
  *
  * Return: number of characters printed

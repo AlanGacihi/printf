@@ -4,7 +4,7 @@
 int print_ptr(unsigned long int n);
 
 /**
- * printf_pointer - prints in base 16.
+ * print_pointer - prints in base 16.
  * @list: list of arguments
  *
  * Return: number of characters printed.
